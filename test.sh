@@ -1,6 +1,6 @@
-dir='iTrust/src/main/edu/ncsu/csc/itrust'
+dir='/src/main/edu/ncsu/csc/itrust'
 dir_main='iTrust'
-cd $dir
+cd $dir_main
 git checkout testcases
 max=1 #Number of testcase iterations
 file="ParameterUtil.java"
