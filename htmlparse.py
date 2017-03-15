@@ -19,7 +19,7 @@ f = open('target/site/surefire-report.html')
 for line in f:
 	if pat.match(line):
 		break
-
+found=False
 pat = re.compile(r'<tr class="b"')
 for line in f:
 	if pat.match(line):
