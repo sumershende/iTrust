@@ -3,10 +3,11 @@ dir_main='iTrust'
 cd $dir_main
 git checkout testcases
 max=1 #Number of testcase iterations
+file="ParameterUtil.java"
 for ((i=1; i <= $max; ++i))
 do
 	cd $dir
-	input_num=$(( ( RANDOM % 10 )  + 1 )) #Choosing random number of files between 1-10
+	input_num=$(( ( RANDOM % 50 )  + 20 )) #Choosing random number of files between 1-10
 	for ((j=1; j<=$input_num; ++j))
 	do
 		#file=`grep -lR --include=*.java "for (.*)" | shuf -n 1`
@@ -15,7 +16,8 @@ do
 		if (($op_num == 1))
 		then
 			file=`find . -type f -name '*.java' | shuf -n 1`
-			sed -i 's/".*"/"hello"/g' $file
+			rand=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
+			sed -i 's/"[^"]*"/"$rand"/g' $file
 		fi
 		if (($op_num == 2))
 		then
@@ -55,7 +57,7 @@ do
 	git add .
 	git commit -am "Testcase"
 	git push -f origin testcases
-	sleep 20
+	sleep 3m
 	git checkout testcases
 	git fetch --all
 	git reset --hard origin/master	
