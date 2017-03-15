@@ -1,4 +1,4 @@
-dir='/src/main/edu/ncsu/csc/itrust'
+dir='src/main/edu/ncsu/csc/itrust'
 dir_main='iTrust'
 cd $dir_main
 git checkout testcases
