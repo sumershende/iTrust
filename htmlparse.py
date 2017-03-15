@@ -60,7 +60,7 @@ count=data["count"]
 
 alltests=[]
 if data["count"]==0:
-	f=codecs.open("Surefire Report.html", 'r')
+	f=codecs.open("target/site/surefire-report.html", 'r')
 	page=f.read()
 	starting=page.index('<a name="Test_Cases">')
 	print(starting)
