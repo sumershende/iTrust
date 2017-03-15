@@ -26,7 +26,7 @@ do
 	git checkout testcases
 	git add .
 	git commit -am "Testcase"
-	git push origin testcases
+	git push -f origin testcases
 	sleep 20
 	git checkout testcases
 	git fetch --all
