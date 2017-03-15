@@ -48,7 +48,7 @@ if found:
 		if line[0:6] == '<td><a':
 			failure_details.append(re.search(r'</a>\w+</', line).group()[4:-2])
 			
-with open('/home/ubuntu/test.json') as f2:
+with open('/home/ubuntu/tests.json') as f2:
     data = json.load(f2)
 #count=data["count"]
 data["count"]+=1
@@ -58,7 +58,7 @@ main_json = {count:{'lineCover':totalLine,'branchCover':totalBranch, 'tests':tes
 data.update(main_json)
 print(data)
 
-with open('/home/ubuntu/test.json', 'w') as f2:
+with open('/home/ubuntu/tests.json', 'w') as f2:
     json.dump(data, f2)
 
 
