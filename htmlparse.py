@@ -50,9 +50,9 @@ if found:
 			
 with open('/home/ubuntu/tests.json') as f2:
     data = json.load(f2)
-#count=data["count"]
+count=data["count"]
 data["count"]+=1
-print("Count",count)
+#print("Count",count)
 main_json = {count:{'lineCover':totalLine,'branchCover':totalBranch, 'tests':tests,'error':err,'failures':failures,'skipped':skipped,'succ_rate':succ_rate,'time':time,'Failure Details': failure_details}}
 #print(main_json)
 data.update(main_json)
