@@ -1,25 +1,54 @@
-dir='src/main/edu/ncsu/csc/itrust'
+dir='iTrust/src/main/edu/ncsu/csc/itrust'
 dir_main='iTrust'
-cd $dir_main
+cd $dir
 git checkout testcases
-max=10 #Number of testcase iterations
+max=1 #Number of testcase iterations
+file="ParameterUtil.java"
 for ((i=1; i <= $max; ++i))
 do
 	cd $dir
 	input_num=$(( ( RANDOM % 10 )  + 1 )) #Choosing random number of files between 1-10
 	for ((j=1; j<=$input_num; ++j))
 	do
-		file=`find . -type f -name '*.java' | shuf -n 1`
-		op_num=$(( ( RANDOM % 3 )  + 1 )) #Choosing random operation (1=string replace 2=swap < with >)
+		#file=`grep -lR --include=*.java "for (.*)" | shuf -n 1`
+		#file=`find . -type f -name '*.java' | shuf -n 1`
+		op_num=$(( ( RANDOM % 8 ) )) #Choosing random operation (1=string replace 2=swap < with >)
 		if (($op_num == 1))
 		then
+			file=`find . -type f -name '*.java' | shuf -n 1`
 			sed -i 's/".*"/"hello"/g' $file
 		fi
 		if (($op_num == 2))
 		then
+			file=`grep -lR --include=*.java "for (.*<.*)" | shuf -n 1`
 			sed -i 's/for\(.*\)</for\1>/g' $file
 		fi
-		#echo "$input_num $op_num $file"
+		if (($op_num == 3))
+		then
+			file=`grep -lR --include=*.java "if (.*<.*)" | shuf -n 1`
+			sed -i 's/if\(.*\)</if\1>/g' $file
+		fi
+		if (($op_num == 4))
+		then
+			file=`grep -lR --include=*.java "if (.*==.*)" |shuf -n 1`
+			sed -i 's/if\(.*\)==/if\1!=/g' $file
+		fi
+		if (($op_num == 5))
+		then
+			file=`grep -lR --include=*.java "for (.*>.*)" | shuf -n 1`
+			sed -i 's/for\(.*\)>/for\1</g' $file
+		fi
+		if (($op_num == 6))
+		then
+			file=`grep -lR --include=*.java "if (.*>.*)" | shuf -n 1`
+			sed -i 's/if\(.*\)>/if\1</g' $file
+		fi
+		if (($op_num == 7))
+		then
+			file=`grep -lR --include=*.java "if (.*!=.*)" |shuf -n 1`
+			sed -i 's/if\(.*\)!=/if\1==/g' $file
+		fi
+		echo "$input_num $op_num $file"
 	done
 	cd ~
 	cd $dir_main
