@@ -20,7 +20,7 @@ do
 		fi
 		if (($op_num == 2))
 		then
-			file=`grep -lR --include=*.java "for (.*<.*)" | shuf -n 1`
+			file=`grep -lR --include=*.java "for (.*;.*<.*;.*)" | shuf -n 1`
 			sed -i 's/for\(.*\)</for\1>/g' $file
 		fi
 		if (($op_num == 3))
@@ -35,7 +35,7 @@ do
 		fi
 		if (($op_num == 5))
 		then
-			file=`grep -lR --include=*.java "for (.*>.*)" | shuf -n 1`
+			file=`grep -lR --include=*.java "for (.*;.*>.*;.*)" | shuf -n 1`
 			sed -i 's/for\(.*\)>/for\1</g' $file
 		fi
 		if (($op_num == 6))
