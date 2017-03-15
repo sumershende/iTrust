@@ -3,7 +3,6 @@ dir_main='iTrust'
 cd $dir_main
 git checkout testcases
 max=1 #Number of testcase iterations
-file="ParameterUtil.java"
 for ((i=1; i <= $max; ++i))
 do
 	cd $dir
