@@ -98,7 +98,7 @@ if data["count"]==0:
 			tending=ending
 	
 
-alltests.extends(failure_details)
+alltests.extend(failure_details)
 print("Total Count",len(alltests))
 data["count"]+=1
 if data["count"]==1:
