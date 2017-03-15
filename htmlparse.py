@@ -59,7 +59,7 @@ with open('/home/ubuntu/tests.json') as f2:
 count=data["count"]
 
 alltests=[]
-if count==0:
+if data["count"]==0:
 	f=codecs.open("Surefire Report.html", 'r')
 	page=f.read()
 	starting=page.index('<a name="Test_Cases">')
@@ -101,7 +101,7 @@ if count==0:
 alltests.extends(failure_details)
 print("Total Count",len(alltests))
 data["count"]+=1
-if count==0:
+if data["count"]==1:
 	main_json = {"alltests":alltests,count:{'lineCover':totalLine,'branchCover':totalBranch, 'tests':tests,'error':err,'failures':failures,'skipped':skipped,'succ_rate':succ_rate,'time':time,'Failure Details': failure_details}}
 #print("Count",count)
 else:
