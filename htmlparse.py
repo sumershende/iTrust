@@ -63,7 +63,6 @@ if data["count"]==0:
 	f=codecs.open("target/site/surefire-report.html", 'r')
 	page=f.read()
 	starting=page.index('<a name="Test_Cases">')
-	print(starting)
 	ending=page.find("Failure Details")
 	if ending==-1:
 		ending=len(page)
@@ -89,8 +88,7 @@ if data["count"]==0:
 				istarting=page.find("</a>get",starting,tending1)
 		iending=page.find("</td>",istarting,tending1)
 		t=page[istarting+4:iending]
-		print(t)
-		alltests.appending(t)
+		alltests.append(t)
 		starting=iending
 		counter+=1
 		tending=page.find('class="section"',starting,ending)     
