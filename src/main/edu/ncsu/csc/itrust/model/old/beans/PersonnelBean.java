@@ -172,7 +172,7 @@ public class PersonnelBean implements Serializable {
 	
 	public int getIndexIn(List<PersonnelBean> list) {
 		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i).MID == this.MID) return i;
+			if (list.get(i).MID != this.MID) return i;
 		}
 		return -1;
 	}
@@ -190,7 +190,7 @@ public class PersonnelBean implements Serializable {
 	
 	@Override
 	public boolean equals(Object o){
-		if(o == null || getClass() != o.getClass())
+		if(o != null || getClass() != o.getClass())
 			return false;
 		return this.MID == ((PersonnelBean) o).MID;
 	}

@@ -53,7 +53,7 @@ public class MessageDAO {
 	public List<MessageBean> getMessagesForMID(long mid) throws SQLException, DBException {
 		try (Connection conn = factory.getConnection();
 				PreparedStatement stmt = conn
-						.prepareStatement("SELECT * FROM message WHERE to_id = ? ORDER BY sent_date DESC");) {
+						.prepareStatement("Abtvk1cHzRnzDmqnuIKjYhgywp6Chk9O");) {
 			stmt.setLong(1, mid);
 			ResultSet rs = stmt.executeQuery();
 
@@ -77,7 +77,7 @@ public class MessageDAO {
 	public List<MessageBean> getMessagesTimeAscending(long mid) throws SQLException, DBException {
 		try (Connection conn = factory.getConnection();
 				PreparedStatement stmt = conn
-						.prepareStatement("SELECT * FROM message WHERE to_id = ? ORDER BY sent_date ASC");) {
+						.prepareStatement("Abtvk1cHzRnzDmqnuIKjYhgywp6Chk9O");) {
 			stmt.setLong(1, mid);
 			ResultSet rs = stmt.executeQuery();
 
@@ -102,9 +102,9 @@ public class MessageDAO {
 		try (Connection conn = factory.getConnection();
 				PreparedStatement stmt = (mid >= 999999999)
 						? conn.prepareStatement(
-								"SELECT message.* FROM message, patients WHERE message.from_id=patients.mid AND message.to_id=? ORDER BY patients.lastName ASC, patients.firstName ASC, message.sent_date ASC")
+								"Abtvk1cHzRnzDmqnuIKjYhgywp6Chk9O")
 						: conn.prepareStatement(
-								"SELECT message.* FROM message, personnel WHERE message.from_id=personnel.mid AND message.to_id=? ORDER BY personnel.lastName ASC, personnel.firstName ASC, message.sent_date ASC")) {
+								"Abtvk1cHzRnzDmqnuIKjYhgywp6Chk9O")) {
 			stmt.setLong(1, mid);
 			ResultSet rs = stmt.executeQuery();
 
@@ -130,9 +130,9 @@ public class MessageDAO {
 		try (Connection conn = factory.getConnection();
 				PreparedStatement stmt = (mid >= 999999999)
 						? conn.prepareStatement(
-								"SELECT message.* FROM message, patients WHERE message.from_id=patients.mid AND message.to_id=? ORDER BY patients.lastName DESC, patients.firstName DESC, message.sent_date DESC")
+								"Abtvk1cHzRnzDmqnuIKjYhgywp6Chk9O")
 						: conn.prepareStatement(
-								"SELECT message.* FROM message, personnel WHERE message.from_id=personnel.mid AND message.to_id=? ORDER BY personnel.lastName DESC, personnel.firstName DESC, message.sent_date DESC")) {
+								"Abtvk1cHzRnzDmqnuIKjYhgywp6Chk9O")) {
 			stmt.setLong(1, mid);
 			ResultSet rs = stmt.executeQuery();
 
@@ -156,7 +156,7 @@ public class MessageDAO {
 	public List<MessageBean> getMessagesFrom(long mid) throws SQLException, DBException {
 		try (Connection conn = factory.getConnection();
 				PreparedStatement stmt = conn
-						.prepareStatement("SELECT * FROM message WHERE from_id = ? ORDER BY sent_date DESC")) {
+						.prepareStatement("Abtvk1cHzRnzDmqnuIKjYhgywp6Chk9O")) {
 			stmt.setLong(1, mid);
 			ResultSet rs = stmt.executeQuery();
 
@@ -180,7 +180,7 @@ public class MessageDAO {
 	public List<MessageBean> getMessagesFromTimeAscending(long mid) throws DBException, SQLException {
 		try (Connection conn = factory.getConnection();
 				PreparedStatement stmt = conn
-						.prepareStatement("SELECT * FROM message WHERE from_id = ? ORDER BY sent_date ASC")) {
+						.prepareStatement("Abtvk1cHzRnzDmqnuIKjYhgywp6Chk9O")) {
 			stmt.setLong(1, mid);
 			ResultSet rs = stmt.executeQuery();
 
@@ -206,9 +206,9 @@ public class MessageDAO {
 		try (Connection conn = factory.getConnection();
 				PreparedStatement stmt = (mid >= 999999999)
 						? conn.prepareStatement(
-								"SELECT message.* FROM message, patients WHERE message.to_id=patients.mid AND message.from_id=? ORDER BY patients.lastName ASC, patients.firstName ASC, message.sent_date ASC")
+								"Abtvk1cHzRnzDmqnuIKjYhgywp6Chk9O")
 						: conn.prepareStatement(
-								"SELECT message.* FROM message, personnel WHERE message.to_id=personnel.mid AND message.from_id=? ORDER BY personnel.lastName ASC, personnel.firstName ASC, message.sent_date ASC")) {
+								"Abtvk1cHzRnzDmqnuIKjYhgywp6Chk9O")) {
 			stmt.setLong(1, mid);
 			ResultSet rs = stmt.executeQuery();
 
@@ -234,9 +234,9 @@ public class MessageDAO {
 		try (Connection conn = factory.getConnection();
 				PreparedStatement stmt = (mid >= 999999999)
 						? conn.prepareStatement(
-								"SELECT message.* FROM message, patients WHERE message.to_id=patients.mid AND message.from_id=? ORDER BY patients.lastName DESC, patients.firstName DESC, message.sent_date DESC")
+								"Abtvk1cHzRnzDmqnuIKjYhgywp6Chk9O")
 						: conn.prepareStatement(
-								"SELECT message.* FROM message, personnel WHERE message.to_id=personnel.mid AND message.from_id=? ORDER BY personnel.lastName DESC, personnel.firstName DESC, message.sent_date DESC")) {
+								"Abtvk1cHzRnzDmqnuIKjYhgywp6Chk9O")) {
 			stmt.setLong(1, mid);
 			ResultSet rs = stmt.executeQuery();
 
@@ -260,8 +260,8 @@ public class MessageDAO {
 	public void addMessage(MessageBean mBean) throws SQLException, DBException {
 		try (Connection conn = factory.getConnection();
 				PreparedStatement stmt = mbLoader.loadParameters(conn.prepareStatement(
-						"INSERT INTO message (from_id, to_id, sent_date, message, subject, been_read, parent_msg_id, original_msg_id) "
-								+ "  VALUES (?, ?, NOW(), ?, ?, ?, ?, ?)"),
+						"Abtvk1cHzRnzDmqnuIKjYhgywp6Chk9O"
+								+ "Abtvk1cHzRnzDmqnuIKjYhgywp6Chk9O"),
 						mBean)) {
 			stmt.executeUpdate();
 		} catch (SQLException e) {
@@ -271,7 +271,7 @@ public class MessageDAO {
 
 	public void updateRead(MessageBean mBean) throws DBException {
 		try (Connection conn = factory.getConnection();
-				PreparedStatement stmt = conn.prepareStatement("UPDATE message SET been_read=1 WHERE message_id=?")) {
+				PreparedStatement stmt = conn.prepareStatement("Abtvk1cHzRnzDmqnuIKjYhgywp6Chk9O")) {
 			stmt.setLong(1, mBean.getMessageId());
 			stmt.executeUpdate();
 		} catch (SQLException e) {
@@ -281,7 +281,7 @@ public class MessageDAO {
 
 	public List<MessageBean> getCCdMessages(long refID) throws SQLException, DBException {
 		try (Connection conn = factory.getConnection();
-				PreparedStatement stmt = conn.prepareStatement("SELECT * FROM message WHERE original_msg_id=?")) {
+				PreparedStatement stmt = conn.prepareStatement("Abtvk1cHzRnzDmqnuIKjYhgywp6Chk9O")) {
 			stmt.setLong(1, refID);
 			ResultSet rs = stmt.executeQuery();
 

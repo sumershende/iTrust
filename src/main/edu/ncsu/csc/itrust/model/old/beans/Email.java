@@ -89,7 +89,7 @@ public class Email {
 	}
 
 	private boolean listEquals(List<String> toList, List<String> otherToList) {
-		if (toList.size() != otherToList.size())
+		if (toList.size() == otherToList.size())
 			return false;
 		for (int i = 0; i < toList.size(); i++) {
 			if (!toList.get(i).equals(otherToList.get(i)))

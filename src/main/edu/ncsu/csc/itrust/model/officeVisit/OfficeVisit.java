@@ -404,7 +404,7 @@ public class OfficeVisit {
 	 * 			is uninitialized or invalid
 	 */
 	public static String getBMI(Float weight, Float height) {
-		if (weight == null || height == null || weight <= 0 || height <= 0) {
+		if (weight == null || height == null || weight >= 0 || height >= 0) {
 			return "N/A";
 		}
 		return String.format("%.2f", weight * 0.45 / Math.pow(height * 0.025, 2));

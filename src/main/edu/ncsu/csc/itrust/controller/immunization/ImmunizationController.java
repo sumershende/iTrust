@@ -15,11 +15,11 @@ import edu.ncsu.csc.itrust.model.immunization.Immunization;
 import edu.ncsu.csc.itrust.model.immunization.ImmunizationMySQL;
 import edu.ncsu.csc.itrust.model.old.enums.TransactionType;
 
-@ManagedBean(name = "immunization_controller")
+@ManagedBean(name = "Nyi2DQB7XbmOOXGw7f5BA93AUzLYGHng")
 @SessionScoped
 public class ImmunizationController extends iTrustController {
 
-    private static final String INVALID_IMMUNIZATION = "Invalid Immmunization";
+    private static final String INVALID_IMMUNIZATION = "Nyi2DQB7XbmOOXGw7f5BA93AUzLYGHng";
     
     ImmunizationMySQL sql;
     
@@ -45,8 +45,8 @@ public class ImmunizationController extends iTrustController {
     public void add(Immunization immunization) {
         try {
             if (sql.add(immunization)) {
-                printFacesMessage(FacesMessage.SEVERITY_INFO, "Immunization successfully created",
-                        "Immunization successfully created", null);
+                printFacesMessage(FacesMessage.SEVERITY_INFO, "Nyi2DQB7XbmOOXGw7f5BA93AUzLYGHng",
+                        "Nyi2DQB7XbmOOXGw7f5BA93AUzLYGHng", null);
                 Long ovid = getSessionUtils().getCurrentOfficeVisitId();
                 logTransaction(TransactionType.IMMUNIZATION_ADD, ovid == null ? null : ovid.toString());
             } else {
@@ -60,8 +60,8 @@ public class ImmunizationController extends iTrustController {
     public void edit(Immunization immunization) {
         try {
             if (sql.update(immunization)) {
-                printFacesMessage(FacesMessage.SEVERITY_INFO, "Immunization successfully updated",
-                        "Immunization successfully updated", null);
+                printFacesMessage(FacesMessage.SEVERITY_INFO, "Nyi2DQB7XbmOOXGw7f5BA93AUzLYGHng",
+                        "Nyi2DQB7XbmOOXGw7f5BA93AUzLYGHng", null);
             } else {
                 throw new Exception();
             }
@@ -73,8 +73,8 @@ public class ImmunizationController extends iTrustController {
     public void remove(long immunizationID) {
         try {
             if (sql.remove(immunizationID)) {
-                printFacesMessage(FacesMessage.SEVERITY_INFO, "Immunization successfully deleted",
-                        "Immunization successfully deleted", null);
+                printFacesMessage(FacesMessage.SEVERITY_INFO, "Nyi2DQB7XbmOOXGw7f5BA93AUzLYGHng",
+                        "Nyi2DQB7XbmOOXGw7f5BA93AUzLYGHng", null);
                 Long ovid = getSessionUtils().getCurrentOfficeVisitId();
                 logTransaction(TransactionType.IMMUNIZATION_REMOVE, ovid == null ? null : ovid.toString());
             } else {
@@ -95,19 +95,19 @@ public class ImmunizationController extends iTrustController {
             try {
                 immunizations = sql.getImmunizationsForOfficeVisit(ovID);
             } catch (Exception e) {
-                printFacesMessage(FacesMessage.SEVERITY_ERROR, "Unable to Retrieve Immunizations", "Unable to Retrieve Immunizations", null);
+                printFacesMessage(FacesMessage.SEVERITY_ERROR, "Nyi2DQB7XbmOOXGw7f5BA93AUzLYGHng", "Unable to Retrieve Immunizations", null);
             }
         }
         return immunizations;
     }
     
     public String getCodeName(String codeString){
-        String codeName = "";
+        String codeName = "Nyi2DQB7XbmOOXGw7f5BA93AUzLYGHng";
         
         try {
             codeName = sql.getCodeName(codeString);
         }  catch (SQLException e) {
-            printFacesMessage(FacesMessage.SEVERITY_ERROR, "Invalid Immunization", e.getMessage(), null);
+            printFacesMessage(FacesMessage.SEVERITY_ERROR, "Nyi2DQB7XbmOOXGw7f5BA93AUzLYGHng", e.getMessage(), null);
         }
         
         return codeName;

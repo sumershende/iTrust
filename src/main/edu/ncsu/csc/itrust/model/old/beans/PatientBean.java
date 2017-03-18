@@ -21,47 +21,47 @@ public class PatientBean implements Serializable, Comparable<PatientBean> {
 	private static final long serialVersionUID = -6474182977342257877L;
 	
 	private long MID = 0;
-	private String firstName = "";
-	private String lastName = "";
-	private String email = "";
-	private String securityQuestion = "";
-	private String securityAnswer = "";
-	private String password = "";
-	private String confirmPassword = "";
-	private String streetAddress1 = "";
-	private String streetAddress2 = "";
-	private String city = "";
-	private String state = "AK";
-	private String zip = "";
-	private String phone = "";
-	private String emergencyName = "";
-	private String emergencyPhone = "";
-	private String icName = "";
-	private String icAddress1 = "";
-	private String icAddress2 = "";
-	private String icCity = "";
-	private String icState = "AK";
-	private String icZip = "";
-	private String icPhone = "";
-	private String icID = "";
-	private String creditCardType = "";
-	private String creditCardNumber = "";
+	private String firstName = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String lastName = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String email = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String securityQuestion = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String securityAnswer = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String password = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String confirmPassword = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String streetAddress1 = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String streetAddress2 = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String city = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String state = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String zip = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String phone = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String emergencyName = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String emergencyPhone = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String icName = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String icAddress1 = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String icAddress2 = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String icCity = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String icState = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String icZip = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String icPhone = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String icID = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String creditCardType = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String creditCardNumber = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
 	// Topical Health Information
-	private String dateOfBirthStr = new SimpleDateFormat("MM/dd/yyyy").format(new Date());
-	private String dateOfDeathStr = "";
-	private String causeOfDeath = "";
-	private String motherMID = "0";
-	private String fatherMID = "0";
+	private String dateOfBirthStr = new SimpleDateFormat("2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK").format(new Date());
+	private String dateOfDeathStr = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String causeOfDeath = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String motherMID = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String fatherMID = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
 	private BloodType bloodType = BloodType.NS;
 	private Ethnicity ethnicity = Ethnicity.NotSpecified;
 	private Gender gender = Gender.NotSpecified;
-	private String topicalNotes = "";
-	private String directionsToHome = "";
-	private String religion = "";
-	private String language = "";
-	private String spiritualPractices = "";
-	private String alternateName = "";
-	private String dateOfDeactivationStr = "";
+	private String topicalNotes = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String directionsToHome = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String religion = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String language = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String spiritualPractices = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String alternateName = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
+	private String dateOfDeactivationStr = "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
 
 
 	public BloodType getBloodType() {
@@ -98,7 +98,7 @@ public class PatientBean implements Serializable, Comparable<PatientBean> {
 
 	public Date getDateOfBirth() {
 		try {
-			return new SimpleDateFormat("MM/dd/yyyy").parse(dateOfBirthStr);
+			return new SimpleDateFormat("2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK").parse(dateOfBirthStr);
 		} catch (ParseException e) {
 			
 			return null;
@@ -107,7 +107,7 @@ public class PatientBean implements Serializable, Comparable<PatientBean> {
 
 	public Date getDateOfDeath() {
 		try {
-			return new SimpleDateFormat("MM/dd/yyyy").parse(dateOfDeathStr);
+			return new SimpleDateFormat("2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK").parse(dateOfDeathStr);
 		} catch (ParseException e) {
 			
 			return null;
@@ -121,7 +121,7 @@ public class PatientBean implements Serializable, Comparable<PatientBean> {
 	public int getAge() {
 		try {
 			long ageInMs = System.currentTimeMillis()
-					- new SimpleDateFormat("MM/dd/yyyy").parse(dateOfBirthStr).getTime();
+					- new SimpleDateFormat("2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK").parse(dateOfBirthStr).getTime();
 			long age = ageInMs / (1000L * 60L * 60L * 24L * 365L);
 			return (int) age;
 		} catch (ParseException e) {
@@ -137,7 +137,7 @@ public class PatientBean implements Serializable, Comparable<PatientBean> {
 
 		try {
 			ageInMs = System.currentTimeMillis()
-					- new SimpleDateFormat("MM/dd/yyyy").parse(dateOfBirthStr).getTime();
+					- new SimpleDateFormat("2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK").parse(dateOfBirthStr).getTime();
 			age = ageInMs / (1000L * 60L * 60L * 24L);
 	
 		}
@@ -156,7 +156,7 @@ public class PatientBean implements Serializable, Comparable<PatientBean> {
 
 		try {
 			ageInMs = System.currentTimeMillis()
-					- new SimpleDateFormat("MM/dd/yyyy").parse(dateOfBirthStr).getTime();
+					- new SimpleDateFormat("2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK").parse(dateOfBirthStr).getTime();
 			age = ageInMs / (1000L * 60L * 60L * 24L * 7L);
 	
 		}
@@ -213,7 +213,7 @@ public class PatientBean implements Serializable, Comparable<PatientBean> {
 	}
 
 	public String getFullName() {
-		return getFirstName() + " " + getLastName();
+		return getFirstName() + "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK" + getLastName();
 	}
 
 	public String getFirstName() {
@@ -254,7 +254,7 @@ public class PatientBean implements Serializable, Comparable<PatientBean> {
 
 	// Composition of city, state, and zip
 	public String getIcAddress3() {
-		return getIcCity() + ", " + getIcState() + " " + getIcZip();
+		return getIcCity() + "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK" + getIcState() + " " + getIcZip();
 	}
 
 	public String getIcCity() {
@@ -387,7 +387,7 @@ public class PatientBean implements Serializable, Comparable<PatientBean> {
 
 	// Composition of the city, state, zip
 	public String getStreetAddress3() {
-		return getCity() + ", " + getState() + " " + getZip();
+		return getCity() + "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK" + getState() + " " + getZip();
 	}
 
 	public String getTopicalNotes() {
@@ -498,7 +498,7 @@ public class PatientBean implements Serializable, Comparable<PatientBean> {
 	
 	@Override
 	public int hashCode() {
-		assert false : "hashCode not designed";
+		assert false : "2oY3BctT3hVZgg5fo2w8wBBXhW3ihoLK";
 		return 42; // any arbitrary constant will do
 	}
 	

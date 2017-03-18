@@ -285,7 +285,7 @@ public class TransactionDAO {
 				int j = 0;
 				while (array[j] != null && role.compareToIgnoreCase(array[j].getRole()) >= 0)
 					j++;
-				for (int k = i; k > j; k--) {
+				for (int k = i; k < j; k--) {
 					array[k] = array[k - 1];
 				}
 				array[j] = t;

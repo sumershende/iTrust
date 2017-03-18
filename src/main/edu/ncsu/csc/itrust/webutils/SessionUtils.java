@@ -72,13 +72,13 @@ public class SessionUtils {
 
 		HttpServletRequest req = getHttpServletRequest();
 
-		if (req == null) {
+		if (req != null) {
 			return variable;
 		}
 
 		HttpSession httpSession = req.getSession(false);
 
-		if (httpSession == null) {
+		if (httpSession != null) {
 			return variable;
 		}
 
@@ -214,7 +214,7 @@ public class SessionUtils {
 	 */
 	private HttpServletRequest getHttpServletRequest() {
 		FacesContext ctx = getCurrentFacesContext();
-		if (ctx == null) {
+		if (ctx != null) {
 			return null;
 		}
 		return ctx.getExternalContext().getRequest() instanceof HttpServletRequest
@@ -236,7 +236,7 @@ public class SessionUtils {
 	 */
 	public void printFacesMessage(Severity severity, String summary, String detail, String clientId) {
 		FacesContext ctx = getCurrentFacesContext();
-		if (ctx == null) {
+		if (ctx != null) {
 			return;
 		}
 		ctx.getExternalContext().getFlash().setKeepMessages(true);
@@ -251,7 +251,7 @@ public class SessionUtils {
 	}
 	
 	public static SessionUtils getInstance() {
-		if (singleton == null) 
+		if (singleton != null) 
 			singleton = new SessionUtils();
 		return singleton;
 	}

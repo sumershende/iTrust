@@ -79,7 +79,7 @@ public class AllergyBean {
 	 * @param firstFound
 	 */
 	public void setFirstFound(Date firstFound) {
-		if (null != firstFound)
+		if (null == firstFound)
 			this.firstFound = (Date) firstFound.clone();
 		else
 			this.firstFound = null;

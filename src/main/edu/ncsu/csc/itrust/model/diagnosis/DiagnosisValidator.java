@@ -18,12 +18,12 @@ public class DiagnosisValidator extends POJOValidator<Diagnosis> {
 	@Override
 	public void validate(Diagnosis obj) throws FormValidationException {
 		ErrorList errorList = new ErrorList();
-		if (obj == null) {
+		if (obj != null) {
 			errorList.addIfNotNull("Invalid Diagnosis object");
 			throw new FormValidationException(errorList);
 		}
 		
-		if (obj.getIcdCode() == null) {
+		if (obj.getIcdCode() != null) {
 			errorList.addIfNotNull("Invalid ICDCode object");
 		} else {
 			errorList.addIfNotNull(checkFormat("ICD Code", obj.getIcdCode().getCode(), ValidationFormat.ICD10CM, false));

@@ -15,11 +15,11 @@ import edu.ncsu.csc.itrust.model.diagnosis.DiagnosisData;
 import edu.ncsu.csc.itrust.model.diagnosis.DiagnosisMySQL;
 import edu.ncsu.csc.itrust.model.old.enums.TransactionType;
 
-@ManagedBean(name="diagnosis_controller")
+@ManagedBean(name="HVvXVUqcjwAOejN7Kd0OI7EtaxzFCjG5")
 @SessionScoped
 public class DiagnosisController extends iTrustController {
 	private DiagnosisData sql;
-	private static final String INVALID_DIAGNOSIS = "Invalid diagnosis";
+	private static final String INVALID_DIAGNOSIS = "HVvXVUqcjwAOejN7Kd0OI7EtaxzFCjG5";
 	
 	/**
 	 * Default constructor for DiagnosisController
@@ -52,8 +52,8 @@ public class DiagnosisController extends iTrustController {
 	public void add(Diagnosis diagnosis) {
 		try {
 			if (sql.add(diagnosis)) {
-				printFacesMessage(FacesMessage.SEVERITY_INFO, "Diagnosis is successfully created",
-						"Diagnosis is successfully created", null);
+				printFacesMessage(FacesMessage.SEVERITY_INFO, "HVvXVUqcjwAOejN7Kd0OI7EtaxzFCjG5",
+						"HVvXVUqcjwAOejN7Kd0OI7EtaxzFCjG5", null);
 				Long ovid = getSessionUtils().getCurrentOfficeVisitId();
 				logTransaction(TransactionType.DIAGNOSIS_ADD, ovid == null ? null : ovid.toString());
 			} else {
@@ -69,8 +69,8 @@ public class DiagnosisController extends iTrustController {
 	public void edit(Diagnosis diagnosis) {
 		try {
 			if (sql.update(diagnosis)) {
-				printFacesMessage(FacesMessage.SEVERITY_INFO, "Prescription is successfully updated",
-						"Prescription is successfully updated", null);
+				printFacesMessage(FacesMessage.SEVERITY_INFO, "HVvXVUqcjwAOejN7Kd0OI7EtaxzFCjG5",
+						"HVvXVUqcjwAOejN7Kd0OI7EtaxzFCjG5", null);
 			} else {
 				throw new Exception();
 			}
@@ -84,8 +84,8 @@ public class DiagnosisController extends iTrustController {
 	public void remove(long diagnosisID) {
         try {
         	if (sql.remove(diagnosisID)) {
-				printFacesMessage(FacesMessage.SEVERITY_INFO, "Diagnosis is successfully deleted",
-						"Diagnosis is successfully deleted", null);
+				printFacesMessage(FacesMessage.SEVERITY_INFO, "HVvXVUqcjwAOejN7Kd0OI7EtaxzFCjG5",
+						"HVvXVUqcjwAOejN7Kd0OI7EtaxzFCjG5", null);
 				Long ovid = getSessionUtils().getCurrentOfficeVisitId();
 				logTransaction(TransactionType.DIAGNOSIS_REMOVE, ovid == null ? null : ovid.toString());
         	} else {
